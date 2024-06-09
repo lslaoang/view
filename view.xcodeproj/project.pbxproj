@@ -11,6 +11,9 @@
 		CC71877F2C161C8700DB2548 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC71877E2C161C8700DB2548 /* ContentView.swift */; };
 		CC7187812C161C8800DB2548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7187802C161C8800DB2548 /* Assets.xcassets */; };
 		CC7187852C161C8800DB2548 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7187842C161C8800DB2548 /* Preview Assets.xcassets */; };
+		CC71878D2C16265800DB2548 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC71878C2C16265800DB2548 /* PDFKit.framework */; };
+		CC7187912C16274200DB2548 /* ticket.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC7187902C16274200DB2548 /* ticket.pdf */; };
+		CC9802BA2C162CEE00D9A038 /* PdfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9802B92C162CEE00D9A038 /* PdfView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		CC7187802C161C8800DB2548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC7187822C161C8800DB2548 /* view.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = view.entitlements; sourceTree = "<group>"; };
 		CC7187842C161C8800DB2548 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC71878C2C16265800DB2548 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/PDFKit.framework; sourceTree = DEVELOPER_DIR; };
+		CC7187902C16274200DB2548 /* ticket.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = ticket.pdf; path = view/Assets.xcassets/ticket.pdf; sourceTree = "<group>"; };
+		CC9802B92C162CEE00D9A038 /* PdfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC71878D2C16265800DB2548 /* PDFKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,8 +43,10 @@
 		CC7187702C161C8700DB2548 = {
 			isa = PBXGroup;
 			children = (
+				CC7187902C16274200DB2548 /* ticket.pdf */,
 				CC71877B2C161C8700DB2548 /* view */,
 				CC71877A2C161C8700DB2548 /* Products */,
+				CC71878B2C16265800DB2548 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +61,7 @@
 		CC71877B2C161C8700DB2548 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CC9802B92C162CEE00D9A038 /* PdfView.swift */,
 				CC71877C2C161C8700DB2548 /* viewApp.swift */,
 				CC71877E2C161C8700DB2548 /* ContentView.swift */,
 				CC7187802C161C8800DB2548 /* Assets.xcassets */,
@@ -67,6 +77,14 @@
 				CC7187842C161C8800DB2548 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC71878B2C16265800DB2548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC71878C2C16265800DB2548 /* PDFKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7187912C16274200DB2548 /* ticket.pdf in Resources */,
 				CC7187852C161C8800DB2548 /* Preview Assets.xcassets in Resources */,
 				CC7187812C161C8800DB2548 /* Assets.xcassets in Resources */,
 			);
@@ -139,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9802BA2C162CEE00D9A038 /* PdfView.swift in Sources */,
 				CC71877F2C161C8700DB2548 /* ContentView.swift in Sources */,
 				CC71877D2C161C8700DB2548 /* viewApp.swift in Sources */,
 			);
