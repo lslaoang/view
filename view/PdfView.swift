@@ -6,22 +6,37 @@
 //
 import SwiftUI
 import PDFKit
-
+import Foundation
 
 struct PDFViewWrapper: UIViewRepresentable {
+    var pdfData: Data?
+    var useFallback: Bool
+
     func makeUIView(context: Context) -> PDFView {
         let pdfView = PDFView()
         pdfView.autoScales = true
-        if let path = Bundle.main.path(forResource: "ticket", ofType: "pdf") {
+        
+        if let pdfData = pdfData {
+            pdfView.document = PDFDocument(data: pdfData)
+        } else if useFallback, let path = Bundle.main.path(forResource: "ticket", ofType: "pdf") {
             let url = URL(fileURLWithPath: path)
             if let document = PDFDocument(url: url) {
                 pdfView.document = document
             }
         }
+        
         return pdfView
     }
 
     func updateUIView(_ uiView: PDFView, context: Context) {
-        // Update the view if needed
+        if let pdfData = pdfData {
+            uiView.document = PDFDocument(data: pdfData)
+        } else if useFallback, let path = Bundle.main.path(forResource: "ticket", ofType: "pdf") {
+            let url = URL(fileURLWithPath: path)
+            if let document = PDFDocument(url: url) {
+                uiView.document = document
+            }
+        }
     }
+
 }

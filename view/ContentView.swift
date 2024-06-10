@@ -17,17 +17,24 @@ struct ContentView: View {
 
 struct PDFViewer: View {
     @State private var isPDFDisplayed = false
+    @StateObject private var viewModel = PDFViewModel()
 
     var body: some View {
         ZStack {
             HexBackgroundView()
                 .opacity(0.09)
                 .edgesIgnoringSafeArea(.all)
-            
+        
             if isPDFDisplayed {
-                PDFViewWrapper()
-                    .edgesIgnoringSafeArea(.all)
-                    .transition(.opacity)
+                if let pdfData = viewModel.pdfData {
+                    PDFViewWrapper(pdfData: pdfData, useFallback: false)
+                        .edgesIgnoringSafeArea(.all)
+                        .transition(.opacity)
+                } else if viewModel.hasError {
+                    PDFViewWrapper(pdfData: nil, useFallback: true)
+                        .edgesIgnoringSafeArea(.all)
+                        .transition(.opacity)
+                }
             } else {
                 VStack {
                     Spacer()
@@ -35,6 +42,7 @@ struct PDFViewer: View {
                     Button(action: {
                         withAnimation {
                             isPDFDisplayed = true
+                            viewModel.fetchPDF()
                         }
                     }) {
                         Text("Open PDF")
@@ -68,12 +76,13 @@ struct PDFViewer: View {
                                     .font(.title)
                             }
                             .foregroundColor(.white)
-                            .padding(10)
-                            .background(Color.red.opacity(0.8))
+                            .padding(15)
+                            .background(Color.red.opacity(0.5))
                             .cornerRadius(10)
                         }
                         .padding()
                     }
+                    .padding(.top, 40)
                     Spacer()
                 }
             }
@@ -101,6 +110,8 @@ struct HexBackgroundView: View {
             }
     }
 }
+
 #Preview {
     ContentView()
 }
+

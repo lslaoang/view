@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC6F5A2E2C16DCB800E66E81 /* PDFViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6F5A2D2C16DCB800E66E81 /* PDFViewModel.swift */; };
+		CC6F5A302C16F35C00E66E81 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC6F5A2F2C16F35C00E66E81 /* Property List.plist */; };
 		CC71877D2C161C8700DB2548 /* viewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC71877C2C161C8700DB2548 /* viewApp.swift */; };
 		CC71877F2C161C8700DB2548 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC71877E2C161C8700DB2548 /* ContentView.swift */; };
 		CC7187812C161C8800DB2548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7187802C161C8800DB2548 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC6F5A2D2C16DCB800E66E81 /* PDFViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewModel.swift; sourceTree = "<group>"; };
+		CC6F5A2F2C16F35C00E66E81 /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		CC7187792C161C8700DB2548 /* view.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = view.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC71877C2C161C8700DB2548 /* viewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewApp.swift; sourceTree = "<group>"; };
 		CC71877E2C161C8700DB2548 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		CC71877B2C161C8700DB2548 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CC6F5A2D2C16DCB800E66E81 /* PDFViewModel.swift */,
+				CC6F5A2F2C16F35C00E66E81 /* Property List.plist */,
 				CC9802B92C162CEE00D9A038 /* PdfView.swift */,
 				CC71877C2C161C8700DB2548 /* viewApp.swift */,
 				CC71877E2C161C8700DB2548 /* ContentView.swift */,
@@ -147,6 +153,7 @@
 			files = (
 				CC7187912C16274200DB2548 /* ticket.pdf in Resources */,
 				CC7187852C161C8800DB2548 /* Preview Assets.xcassets in Resources */,
+				CC6F5A302C16F35C00E66E81 /* Property List.plist in Resources */,
 				CC7187812C161C8800DB2548 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +168,7 @@
 				CC9802BA2C162CEE00D9A038 /* PdfView.swift in Sources */,
 				CC71877F2C161C8700DB2548 /* ContentView.swift in Sources */,
 				CC71877D2C161C8700DB2548 /* viewApp.swift in Sources */,
+				CC6F5A2E2C16DCB800E66E81 /* PDFViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,9 +295,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = view/view.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"view/Preview Content\"";
+				DEVELOPMENT_TEAM = 59DTKZ28U3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -323,9 +333,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = view/view.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"view/Preview Content\"";
+				DEVELOPMENT_TEAM = 59DTKZ28U3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
